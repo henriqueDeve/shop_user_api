@@ -1,0 +1,26 @@
+{
+  "user1": {
+    "name": "Piter Parker",
+    "cpf": "12345678910",
+    "tel": "00000000000",
+    "address": "Rua das calcinhas 399 new york",
+    "email": "piterparkerspider@yahool.com",
+    "dateRegister": "2022-12-27T14:50:23.000Z"
+  },
+  "user2": {
+    "name": "Bruce Wayne",
+    "cpf": "12343458910",
+    "tel": "00000000000",
+    "address": "Rua escura 122 Gothan City",
+    "email": "brucemorcego_orfao@yahool.com",
+    "dateRegister": "2022-12-27T14:50:23.000Z"
+  },
+  "user3": {
+    "name": "Diana Filha de Zeus",
+    "cpf": "12345678456",
+    "tel": "00000000000",
+    "address": "Av das maravilhas 222 Themyscira",
+    "email": "diana_amazonas_comorgulho@yahool.com",
+    "dateRegister": "2022-12-27T14:50:23.000Z"
+  }
+}
