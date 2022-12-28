@@ -12,9 +12,10 @@ import java.util.List;
 @SpringBootApplication
 public class UserApiApplication {
 	public static void main(String[] args) {SpringApplication.run(UserApiApplication.class, args);}
-	public static List<UserDTO> usuarios = new ArrayList<UserDTO>();
+	public static List<UserDTO> users = new ArrayList<UserDTO>();
 	@PostConstruct
 	public void initiateList() {
+
 		UserDTO userDTO = new UserDTO();
 		userDTO.setName("Eduardo");
 		userDTO.setCpf("123");
@@ -38,9 +39,10 @@ public class UserApiApplication {
 		userDTO3.setEmail("bruna@email.com");
 		userDTO3.setTel("1234-3454");
 		userDTO3.setDateRegister(new Date());
-		usuarios.add(userDTO);
-		usuarios.add(userDTO2);
-		usuarios.add(userDTO3);
+
+		users.add(userDTO);
+		users.add(userDTO2);
+		users.add(userDTO3);
 	}
 
 }
