@@ -16,6 +16,12 @@ public class UserController {
         return UserApiApplication.users;
     };
 
+    @GetMapping("/users/{cpf}")
+    public UserDTO getUserById(@PathVariable String cpf) {
+        for (UserDTO userDTO : UserApiApplication.users ) {
+            if(userDTO.getCpf().equals(cpf)){
+                return userDTO;
+            }
         }
         return null;
     }
