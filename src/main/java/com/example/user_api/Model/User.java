@@ -4,6 +4,7 @@ import com.example.user_api.DTO.UserDTO;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class User {
@@ -18,6 +19,7 @@ public class User {
     private String cpf;
     private String address;
     private Date dateRegister;
+
 
     public String getName() {
         return name;
