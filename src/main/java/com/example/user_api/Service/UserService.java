@@ -7,6 +7,8 @@ import com.example.user_api.Repository.UserRepository;
 import com.example.user_api.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -33,6 +35,7 @@ public class UserService {
     }
 
     public User saveUser(UserDTO userDTO) {
+        userDTO.setDateRegister(new Date());
         User user = userRepository.save(User.convertDTO(userDTO));
         return user;
     }
