@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS users
-
-(
+CREATE SCHEMA IF NOT EXISTS `user` (
 id big-serial primary key,
 nome varchar(100) not null,
 cpf varchar(100) not null,

@@ -1,8 +1,9 @@
 package com.example.user_api.Service;
 
-import Repository.UserRepository;
+
 import com.example.user_api.DTO.UserDTO;
 import com.example.user_api.Exception.NotFoundException;
+import com.example.user_api.Repository.UserRepository;
 import com.example.user_api.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,12 +13,11 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService {
-
     @Autowired
     UserRepository userRepository;
 
     public List<UserDTO> getUserAll() {
-        List<User> users = userRepository.findAll();
+        List<User> users = (List<User>) userRepository.findAll();
         return users
                 .stream()
                 .map(UserDTO::convert)
@@ -64,5 +64,5 @@ public class UserService {
                 .collect(Collectors.toList());
     }
 
-    
+
 }
