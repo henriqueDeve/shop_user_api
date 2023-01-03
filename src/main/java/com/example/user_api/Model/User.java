@@ -1,10 +1,16 @@
-package com.example.user_api.DTO;
+package com.example.user_api.Model;
 
-import com.example.user_api.Model.User;
+import com.example.user_api.DTO.UserDTO;
 
+import javax.persistence.*;
 import java.util.Date;
 
-public class UserDTO {
+@Entity
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
 
     private String name;
     private String email;
@@ -61,14 +67,18 @@ public class UserDTO {
         this.dateRegister = dateRegister;
     }
 
-    public static UserDTO convert(User user) {
-        UserDTO userDTO = new UserDTO();
-        userDTO.setNome(user.getNome());
-        userDTO.setEndereco(user.getEndereco());
-        userDTO.setCpf(user.getCpf());
-        userDTO.setEmail(user.getEmail());userDTO.setTelefone(user.getTelefone());
-        userDTO.setDataCadastro(user.getDataCadastro());
+    public static User convertDTO(UserDTO userDTO) {
+        User user = new User();
 
-        return userDTO;
+        user.setName(userDTO.getName());
+        user.setCpf(userDTO.getCpf());
+        user.setEmail(userDTO.getEmail());
+        user.setTel(userDTO.getTel());
+        user.setAddress(userDTO.getAddress());
+        user.setDateRegister(userDTO.getDateRegister());
+
+        return user;
     }
+
+
 }
