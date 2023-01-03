@@ -1,9 +1,11 @@
-CREATE SCHEMA IF NOT EXISTS `user` (
+create schema if not exists users;
+
+create table "user" (
 id big-serial primary key,
-nome varchar(100) not null,
+name varchar(100) not null,
 cpf varchar(100) not null,
-endereco varchar(100) not null,
+address varchar(100) not null,
 email varchar(100) not null,
-telefone varchar(100) not null,
-data_cadastro timestamp not null
+tel varchar(100) not null,
+date_register timestamp not null
 );
