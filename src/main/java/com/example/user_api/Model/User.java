@@ -1,10 +1,9 @@
 package com.example.user_api.Model;
 
 import com.example.user_api.DTO.UserDTO;
-
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
+
 
 @Entity
 @Table(name = "user")
@@ -91,6 +90,5 @@ public class User {
 
         return user;
     }
-
 
 }
