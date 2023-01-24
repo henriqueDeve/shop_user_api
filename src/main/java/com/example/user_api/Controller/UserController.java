@@ -5,7 +5,6 @@ import com.example.user_api.Model.User;
 import com.example.user_api.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
